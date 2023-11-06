@@ -5,10 +5,10 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.5</version>
+        <version>3.0.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <groupId>com.hb-dev</groupId>
     <artifactId>car-value-estimator-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>car-value-estimator-backend</name>
@@ -28,6 +28,12 @@
         </dependency>
 
         <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>rds</artifactId>
+            <version>2.15.55</version> <!-- AWS SDK sürümünü belirtin -->
+        </dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
@@ -41,6 +47,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${org.mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-mapstruct-binding</artifactId>
+            <version>0.2.0</version>
         </dependency>
 
         <dependency>
@@ -94,5 +115,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>car-value-estimator</finalName>
     </build>
 </project>
