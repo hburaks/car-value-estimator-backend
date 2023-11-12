@@ -7,16 +7,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.util.List;
+import java.util.Map;
+
 @Entity
-@Table(name = "cars")
+@Table(name = "tags")
 @Data
-public class CarEntity extends BaseEntity {
-    private String distance;
-    private FuelTypeEnum fuelType;
-    private Long estimatedValue;
-    private Long expectedValue;
+public class TagEntity extends BaseEntity {
     private String make;
-    private String model;
-    private TransmissionTypeEnum transmission;
-    private Integer year;
+    private List<String> model;
 }

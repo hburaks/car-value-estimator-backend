@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 public class PageResponseDTO<DTO extends BaseResponseDTO> {
-
     private int number;
     private int size;
     private int totalPages;

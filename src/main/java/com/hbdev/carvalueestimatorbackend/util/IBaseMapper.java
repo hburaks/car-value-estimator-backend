@@ -18,6 +18,4 @@ public interface IBaseMapper<
 
     Entity updateEntityFromRequestDTO(RequestDTO requestDTO, @MappingTarget Entity entity);
 
-
-
 }
